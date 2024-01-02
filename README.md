@@ -1,5 +1,6 @@
-### Hi there 👋
+### Hi there ![image](https://github.com/nidakhanam/nidaKhanam/assets/86373830/1acdaa40-8475-472e-9e01-1618e41be8bb)
 
+Nida Here
 <!--
 **nidakhanam/nidaKhanam** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
