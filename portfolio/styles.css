@@ -335,7 +335,23 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .fact { display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: var(--r-md); font-size: 0.92rem; line-height: 1.4; transition: transform 0.25s, box-shadow 0.25s; }
 .fact:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
 .fact__icon { font-size: 1.5rem; }
-@media (min-width: 900px) { .about { grid-template-columns: 1.4fr 1fr; align-items: start; } }
+.about__photo { position: relative; margin: 0 auto 8px; width: min(220px, 60vw); aspect-ratio: 1; }
+.about__photo img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%;
+  border-radius: 50%; border: 6px solid var(--bg);
+  box-shadow: 0 0 0 4px var(--baby-pink), 0 0 0 8px var(--sage), var(--shadow-lift);
+}
+.about__photo-sparkle { position: absolute; font-size: 1.5rem; color: var(--rose-deep); animation: twinkle 3s ease-in-out infinite; }
+.about__photo-sparkle--1 { top: 2%; right: 2%; }
+.about__photo-sparkle--2 { bottom: 6%; left: 0; color: var(--green-deep); animation-delay: -1.5s; }
+[data-theme="dark"] .about__photo-sparkle { color: var(--baby-pink); }
+[data-theme="dark"] .about__photo-sparkle--2 { color: var(--mint); }
+@media (min-width: 900px) {
+  .about { grid-template-columns: 240px 1fr; grid-template-areas: "photo card" "photo facts"; align-items: start; column-gap: 32px; }
+  .about__photo { grid-area: photo; width: 240px; margin: 8px 0 0; }
+  .about__card { grid-area: card; }
+  .about__facts { grid-area: facts; grid-template-columns: repeat(4, 1fr); }
+}
 
 /* ---------- Experience / timeline ---------- */
 .timeline { position: relative; padding-left: 28px; }
