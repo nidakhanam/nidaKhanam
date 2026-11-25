@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Nida Khanam — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --ink: #2E2A2B; --muted: #5E5558; --green: #3F7D5C; --rose: #A3416A; --line: #E9D3DC; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: Inter, Arial, sans-serif; color: var(--ink); font-size: 9.2pt; line-height: 1.34; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; padding: 9.5mm 12.5mm 6mm; position: relative; }
+  .page::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2.2mm; background: linear-gradient(90deg, #F4B6C2, #A8D5BA); }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.2px solid var(--line); padding-bottom: 6px; margin-bottom: 6px; }
+  h1 { font-family: Quicksand, Inter, sans-serif; font-size: 23pt; line-height: 1; margin: 0 0 3px; color: var(--ink); letter-spacing: -0.3px; }
+  .role { font-size: 10.5pt; font-weight: 600; color: var(--green); margin: 0; }
+  .contact { text-align: right; font-size: 8.6pt; line-height: 1.5; color: var(--muted); }
+  .contact a { color: var(--ink); text-decoration: none; }
+  h2 { font-size: 9.2pt; text-transform: uppercase; letter-spacing: 1.2px; color: var(--rose); margin: 7px 0 3px; padding-bottom: 2px; border-bottom: 1px solid var(--line); }
+  p { margin: 0; }
+  .job, .proj { margin-bottom: 3.5px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .title { font-weight: 700; font-size: 9.8pt; }
+  .org { font-weight: 600; color: var(--green); }
+  .date { font-size: 8.6pt; color: var(--muted); white-space: nowrap; }
+  .stack { font-size: 8.4pt; color: var(--muted); }
+  ul { margin: 2px 0 0; padding-left: 13px; }
+  li { margin: 0 0 1.6px; }
+  li::marker { color: var(--rose); }
+  b { font-weight: 600; }
+  .skills { display: grid; grid-template-columns: 34mm 1fr; row-gap: 1.8px; column-gap: 6px; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+  .proj .stack { margin-left: 4px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Nida Khanam</h1>
+      <p class="role">Python Developer · Backend &amp; GenAI</p>
+    </div>
+    <div class="contact">
+      Hyderabad, India · <a href="mailto:nidakhanzohra@gmail.com">nidakhanzohra@gmail.com</a><br />
+      <a href="https://nidakhanam.github.io/">nidakhanam.github.io</a> · <a href="https://github.com/nidakhanam">github.com/nidakhanam</a><br />
+      <a href="https://www.linkedin.com/in/nida-khanam-b4398920a/">linkedin.com/in/nida-khanam-b4398920a</a>
+    </div>
+  </header>
+
+  <h2>Summary</h2>
+  <p>Python developer with 3+ years building Django/DRF backends, REST APIs, PostgreSQL data models and Kafka/Elasticsearch observability pipelines for enterprise network-compliance platforms. Now focused on Generative AI: agentic RAG, LangGraph workflows, guardrails, LLM evaluation and production debugging of GenAI systems.</p>
+
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="row"><span><span class="title">Python Developer + GenAI</span> · <span class="org">Infosys</span></span><span class="date">Nov 2026 – Present</span></div>
+    <ul><li>Building Python services and Generative AI solutions.</li></ul>
+  </div>
+  <div class="job">
+    <div class="row"><span><span class="title">Software Developer</span> · <span class="org">Kyndryl</span>, Hyderabad</span><span class="date">Aug 2023 – Oct 2026</span></div>
+    <ul>
+      <li>Built a <b>Python/Django</b> backend for a firewall and network-device compliance platform on <b>PostgreSQL</b>, validating security rules across 5 vendor platforms and <b>reducing policy violations by 35%</b> across 10+ client accounts.</li>
+      <li>Designed <b>REST APIs</b> and backend services for automated configuration-drift detection across <b>500+ network devices</b>, cutting manual review effort by <b>40%</b> (~15 hours/week saved).</li>
+      <li>Engineered <b>Kafka + Elasticsearch + Kibana</b> observability pipelines processing <b>1M+ log events/day</b>, reducing incident detection time by <b>50%</b> across 15+ client accounts.</li>
+      <li>Integrated services with <b>NetBox</b> as the single source of truth for 1,000+ device records, improving inventory data consistency by 30%.</li>
+      <li>Developed reusable <b>React</b> components and <b>RBAC</b> features, improving development velocity by 25% and supporting 100+ concurrent users.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="proj">
+    <div class="row"><span><span class="title">DocuMind</span> · Agentic document intelligence <span class="stack">(Python, LangGraph, LangChain, Gemini, ChromaDB, FastAPI, Streamlit, Presidio, RAGAS)</span></span></div>
+    <ul>
+      <li>Q&amp;A and invoice extraction over business PDFs (digital and scanned) with <b>cited, grounding-checked answers</b> and <b>human-in-the-loop review</b> via LangGraph interrupts; 19/20 on a golden set (baseline 18/20), <b>RAGAS faithfulness 0.989</b>.</li>
+      <li><b>Hybrid retrieval</b> (BM25 + vector, Reciprocal Rank Fusion) with ID-aware pinning: exact-ID hit rate 8/8 vs 6/8 vector-only. OCR routing by text-quality score (Gemini vision, Tesseract).</li>
+      <li><b>Guardrails</b>: Presidio PII masking, prompt-injection quarantine at ingestion, LLM-judge grounding. LLM gateway with retry, backoff and model fallback; per-request tracing (Langfuse).</li>
+      <li>Injected <b>9 production-style failures</b> (rate limits, hallucination, broken JSON, runaway loops, PDF injection), debugged them through traces and evals, and wrote an <b>RCA</b> for each; 49 automated tests.</li>
+    </ul>
+  </div>
+  <div class="proj">
+    <div class="row"><span><span class="title">Task &amp; Inventory Tracker</span> <span class="stack">(Django, DRF, PostgreSQL, React, JWT)</span></span></div>
+    <ul><li>Full-stack app with JWT auth and 3-role permissions; REST API with 10+ endpoints (filtering, pagination, bulk ops) on a normalized schema, cutting average query response time by 30%.</li></ul>
+  </div>
+  <div class="proj">
+    <div class="row"><span><span class="title">Log Insight</span> <span class="stack">(Python, Kafka, Elasticsearch, Kibana)</span></span></div>
+    <ul><li>Log-ingestion pipeline streaming 50K+ events/day through Kafka into Elasticsearch, with Kibana dashboards and threshold alerts that cut manual log review by 40%.</li></ul>
+  </div>
+  <div class="proj">
+    <div class="row"><span><span class="title">Config Diff CLI</span> <span class="stack">(Python, Click, YAML, GitHub Actions)</span></span></div>
+    <ul><li>CLI that diffs network-device configs against a baseline, detecting 100+ drift violations; 90%+ test coverage with CI on GitHub Actions.</li></ul>
+  </div>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>GenAI &amp; Agentic AI</dt><dd>LLMs, Prompt Engineering, RAG, Embeddings &amp; Vector DBs, AI Agents &amp; Tool Calling, Multi-Agent Workflows, LangChain / LangGraph, MCP, LLM Evaluation &amp; Guardrails, OpenAI / Claude / Gemini APIs</dd>
+    <dt>Backend</dt><dd>Python, Django, Django REST Framework, FastAPI, REST APIs, Microservices</dd>
+    <dt>Data &amp; Observability</dt><dd>PostgreSQL, MySQL, Redis, Kafka, Elasticsearch, Kibana</dd>
+    <dt>Cloud &amp; DevOps</dt><dd>AWS, Azure, Docker, Kubernetes, CI/CD (GitHub Actions), Git, Linux</dd>
+    <dt>Frontend &amp; Tools</dt><dd>React.js, Vite, HTML/CSS · Pytest, Postman, Swagger/OpenAPI, NetBox, Agile/Scrum</dd>
+  </dl>
+
+  <div class="two">
+    <div>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Microsoft Azure Network Engineer Associate (AZ-700)</li>
+        <li>AWS Certified Solutions Architect – Associate</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Education</h2>
+      <p><b>B.Tech, Computer Science &amp; Engineering</b><br />Aditya University, Andhra Pradesh</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
